@@ -19,10 +19,8 @@
         <i class="fas fa-plus"></i>AGREGAR TAREA
       </button>
     </div>
-    <div class="lista" v-for="(tarea, index) in tareas" :key="index">
-      <ul>
-        <li><input class="check" type="checkbox" />{{ tarea }}</li>
-      </ul>
+    <div v-for="(tarea, index) in tareas" :key="index">
+      <p class="lista"><input class="check" type="checkbox" />{{ tarea }}</p>
     </div>
   </div>
 </template>
@@ -92,14 +90,13 @@ export default {
   padding-right: 7px;
 }
 .lista {
+  display: flex;
+  justify-content: center;
   text-align: left;
-  margin-left: 34%;
   font-size: 20px;
   font-weight: lighter;
 }
-.lista li {
-  list-style: none;
-}
+
 .check {
   margin-right: 15px;
 }
